@@ -7,6 +7,8 @@ services:
       - "3000:3000"
     volumes:
       - ./frontend:/app
+    depends_on:
+      - backend
   backend:
     build:
       context: ./backend
@@ -14,6 +16,8 @@ services:
       - "3001:3001"
     volumes:
       - "./backend:/app"
+    depends_on:
+      - db
   db:
     image: mysql:8.0
     environment:
@@ -24,3 +28,5 @@ services:
       - /tmp/dockerdir:/etc/mysql/conf.d/
     ports:
       - 3306:3306
+volumes:
+  mysql-data:
