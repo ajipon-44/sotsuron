@@ -7,7 +7,7 @@ ENV PORT 3000
 
 # 作業ディレクトリ
 WORKDIR $APP_PATH
-COPY ./ $APP_PATH
+COPY . $APP_PATH
 RUN yarn install
 RUN yarn build
 
