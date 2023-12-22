@@ -22,7 +22,7 @@ jobs:
         with:
           ruby-version: 3.2.2
       - name: Change to backend directory
-        run: cd backend
+        run: cd ../../backend
       - name: Install dependencies
         run: |
           gem install bundler
