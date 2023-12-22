@@ -1,8 +1,5 @@
 name: Rails GitHub Actions
-on:
-  push:
-    branches:
-      - main
+on: [push]
 jobs:
   test-about-rails:
     runs-on: ubuntu-latest
